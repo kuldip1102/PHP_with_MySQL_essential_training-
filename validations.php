@@ -7,6 +7,10 @@
 	<?php 
 
 	// * Presence
+	// use trim() so empty spaces dont count 
+	// use === to avoid false positives
+	// empty() would consider "0" to be empty
+	
 		$value = trim("");
 		if (!isset($value) || $value === "") {
 			echo "validation failed.<br>";
