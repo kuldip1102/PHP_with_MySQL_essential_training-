@@ -7,8 +7,8 @@
 	<?php 
 
 	// * Presence
-		$value = "d";
-		if (!isset($value) || empty($value)) {
+		$value = trim("");
+		if (!isset($value) || $value === "") {
 			echo "validation failed.<br>";
 		}
 
