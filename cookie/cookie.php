@@ -10,8 +10,6 @@
 		// setcookie($name,null);
 		setcookie($name,null, time() - 3600);
 
-
-
 	?>
 	
 <!DOCTYPE html>
