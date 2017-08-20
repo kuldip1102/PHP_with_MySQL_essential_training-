@@ -22,6 +22,15 @@
 			return in_array($value, $set);
 		}
 
+		function valid_max_length($field_with_max_length){
+		foreach ($field_with_max_length as $field => $max) {
+			$value = trim($_POST[$field]);
+			if (!has_max_lenght($value,$max)) {
+				$errors[$field] = $field." is too long.";
+			}
+		}
+		}
+
 		function form_error($errors = array()){
 		$output = "";
 		if (!empty($errors)) {
